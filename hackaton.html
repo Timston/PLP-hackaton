@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araoye Martins - Timston</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+             }
+        header {
+            background: #e40687;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        header .logo {
+            font-size: 35px;
+            color: #fffefe;
+        }
+        header .menu {
+            display: none;
+        }
+        header .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        nav {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #ee0594;
+            color: #fff;
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+            width: 150px;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background: #fa0362e3;
+        }
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .about-me img {
+            width: 200px;
+            height: 200px;
+            border-radius: 25px;
+        }
+        .about-me h2 {
+            text-align: center;
+        }
+        .form-section {
+            background: #0615e4;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .form-section input {
+            width: fit-content;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-section button {
+            background: black;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #e40687;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Timston</div>
+        <div class="hamburger">&#9776;</div>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#interests">Interests</a>
+            <a href="#cv" download="cv.pdf">My CV</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="about-me">
+            <img src="timston.JPG" alt="Araoye Martins">
+            <h2>About Me</h2>
+            <p>Hello readers, welcome to my page.
+                    i go by the name Martins Araoye, judging from my name i'm from the Yoruba tribe,
+                    a Nigerian tribe. i'm a Nigerian.
+                    i'm from a simple family of five (my parents, my two siblings and I).
+                    i'm an overall awesome guy, you don't need to agree because this might basically
+                    be the first time you are reading about me.that's all about me, thanks for reading through.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>to be honest this is my first project, i haven't worked on any project 
+                   so far but i'm glad i could use this medium to give myself a challenge.
+               </p>
+        </section>
+       <section>
+           <h2>Educational background</h2>
+           <p> I attended a bestmak college for my primary education 
+                  and i graduated from bestmak college as well for my secondary/college education.
+                  i learnt to repair smartphones and i'm currently undergoing my HND degree at IBADAN CITY POLYTECHNIC</p>
+       </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>'m a really realy curious person and mostly interested in technological advancement and science
+            </p>
+        </section>
+
+        <section id="cv">
+            <h3>Download My CV here</h3>
+            <p><a href="cv.pdf" download>Download CV</a></p>
+        </section>
+
+        <section id="contact" class="form-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Araoye Martins. All rights reserved.
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! Your message has been sent.');
+        });
+    </script>
+</body>
+</html>
