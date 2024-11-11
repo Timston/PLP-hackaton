@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Telemedicine Website</title>
+    <style type="text/css" media="all">
+/* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        header .logo h1 {
+            font-size: 1.8em;
+            margin-left: 20px;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        header nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        #hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        #hamburger-menu .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+        
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .article-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        article {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        article img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        /* Contact Form */
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header nav ul {
+                display: none;
+            }
+        
+            #hamburger-menu {
+                display: flex;
+            }
+        
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            header .logo h1 {
+                font-size: 1.4em;
+            }
+        }
+/* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        footer .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        footer .social-media a:hover {
+            text-decoration: underline;
+        }
+      
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Telemedicine Hub</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-menu" class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Main Content Sections -->
+    <section id="home">
+        <h2>Welcome to Telemedicine</h2>
+        <p>Your guide to understanding telemedicine and its impact on healthcare.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Telemedicine</h2>
+        <p>Telemedicine is the use of technology to deliver healthcare services remotely. This can include consultations with healthcare providers via video, remote monitoring of patients, and digital health records. It helps increase access to healthcare, especially for rural and underserved populations.</p>
+    </section>
+
+    <!-- Articles Section with Grid Layout -->
+    <section id="articles">
+        <h2>Telemedicine Articles</h2>
+        <div class="article-grid">
+            <article>
+                <img src="images/image1.jpg" alt="Telemedicine in Action">
+                <h3>Telemedicine in Action</h3>
+                <p>Telemedicine allows doctors to diagnose and treat patients remotely. With the use of video calls, remote monitoring, and digital tools, patients can receive care in the comfort of their homes.</p>
+            </article>
+            <article>
+                <img src="images/image2.jpg" alt="The Future of Telemedicine">
+                <h3>The Future of Telemedicine</h3>
+                <p>Telemedicine is rapidly evolving with advancements in AI, remote diagnostics, and wearable health devices. In the future, it is expected to become a staple of modern healthcare.</p>
+            </article>
+            <!-- Add more articles as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Telemedicine Hub. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script>document.getElementById('hamburger-menu').addEventListener('click', function() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.to buy ggle('active');
+    });
+    
+    document.querySelectorAll('#navbar a').forEach(item => {
+        item.addEventListener('click', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.remove('active');
+        });
+    });</script>
+</body>
+</html>
